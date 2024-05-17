@@ -15,7 +15,7 @@ BOLD = \033[1m
 GREEN = \033[92m
 BLUE = \033[94m
 
-SRCS  = magaphone.cpp
+SRCS  = megaphone.cpp
 
 OBJ = $(patsubst $(DIR_SRC)%.cpp,$(DIR_OBJ)%.o,$(SRCS))
 
