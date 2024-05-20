@@ -6,30 +6,47 @@
 /*   By: gpeyre <gpeyre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:47:52 by gpeyre            #+#    #+#             */
-/*   Updated: 2024/05/17 18:14:42 by gpeyre           ###   ########.fr       */
+/*   Updated: 2024/05/20 21:05:45 by gpeyre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "PhoneBook_class.hpp"
 
-PhoneBook::PhoneBook(void)
+PhoneBook::PhoneBook() : i(0)
+{}
+
+void PhoneBook::addContact(const Contact& c) 
 {
-	std::cout << "Constructeur called" << std::endl;
-	this->foo = 42;
-	std::cout << "Variable foo = "<< this->foo << std::endl;
-	this->bar();
-	return ;
+	if (i < MAX_CONTACT)
+	{
+		diectory[i] = c;
+		i++;
+	}
+	else
+	{
+		i = 0;
+		directory[i] = c;
+		i++;
+	}
 }
+
+void PhoneBook::displayContacts(void) const
+{
+	int 		j = 0;
+	std::string	output = "";
+
+	std::cout << "     index|First Name| Last Name|  Nickname" << std::endl;
+	std::cout << "__________|__________|__________|__________" << std::endl;
+	while (j < i)
+	{
+		if (directory[i])
+		directory[i].
+	} 
+}
+// modifier cette  fonction pour afficher les elements comme demandé
 
 PhoneBook::~PhoneBook(void)
 {
 	std::cout << "Destructeur called" << std::endl;
-	return ;
-}
-
-void	PhoneBook::bar(void)
-{
-	std::cout << "Member function bar called" << std::endl;
 	return ;
 }
