@@ -12,8 +12,8 @@
 
 #include "PhoneBook_class.hpp"
 
-Contact::Contact(const std::string& f_n, const std::string& l_n, const std::string& n_n,
-		const std::string& ph_n, const std::string& d_s) :
+Contact::Contact(const std::string& f_n, const std::string& l_n,
+	const std::string& n_n, const std::string& ph_n, const std::string& d_s) :
 		first_name(f_n),
 		last_name(l_n),
 		nickname(n_n),
