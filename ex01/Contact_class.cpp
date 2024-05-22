@@ -12,8 +12,11 @@
 
 #include "PhoneBook_class.hpp"
 
-Contact::Contact(const std::string& f_n, const std::string& l_n,
-	const std::string& n_n, const std::string& ph_n, const std::string& d_s) :
+Contact::Contact(void) : first_name(""), last_name(""), nickname(""),
+	phone_number(""), darkest_secret("") {}
+
+Contact::Contact(std::string& f_n, std::string& l_n,
+		std::string& n_n, std::string& ph_n, std::string& d_s) :
 		first_name(f_n),
 		last_name(l_n),
 		nickname(n_n),
@@ -69,4 +72,10 @@ void Contact::setPhoneNumber(const std::string& ph_n)
 void Contact::setDarkestSecret(const std::string& d_s)
 {
     darkest_secret = d_s;
+}
+
+Contact::~Contact(void)
+{
+	std::cout << "Destructeur called" << std::endl;
+	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: gpeyre <gpeyre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:58:01 by gpeyre            #+#    #+#             */
-/*   Updated: 2024/05/21 16:01:54 by gpeyre           ###   ########.fr       */
+/*   Updated: 2024/05/22 18:43:18 by gpeyre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ class Contact
 
 	public:
 
-	Contact(const std::string& f_n, const std::string& l_n, const std::string& n_n,
-		const std::string& ph_n, const std::string& d_s);
+	Contact(void);
+	Contact(std::string& f_n, std::string& l_n, std::string& n_n,
+		std::string& ph_n, std::string& d_s);
 	~Contact(void);
 
 	std::string getFirstName() const;
@@ -50,18 +51,18 @@ class PhoneBook
 {
 	private:
 
-	int const	MAX_CONTACT;
-	Contact 	directory[8];
-	int			old_i;
-	int			i;
+	int			cur_i;
+	int			MAX_CONTACT;
+	Contact		directory[8];
 
 	public:
 
 	PhoneBook(void);
 	~PhoneBook(void);
 
-    void addContact(const Contact &c);
-	void displayContacts(void) const;
+    void	addContact(const Contact &c);
+	void	check_input_len(std::string& input);
+	void 	displayContacts(void);
 };
 
 #endif
