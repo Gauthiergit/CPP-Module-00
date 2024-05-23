@@ -6,7 +6,7 @@
 /*   By: gpeyre <gpeyre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:58:01 by gpeyre            #+#    #+#             */
-/*   Updated: 2024/05/22 18:43:18 by gpeyre           ###   ########.fr       */
+/*   Updated: 2024/05/23 17:50:42 by gpeyre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,12 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 
+#define BLUE "\033[94m"
+#define WHITE "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
 
 class Contact
 {
@@ -39,12 +44,8 @@ class Contact
 	std::string getNickname() const;
 	std::string getPhoneNumber() const;
 	std::string getDarkestSecret() const;
-
-	void setFirstName(const std::string& f_n);
-	void setLastName(const std::string& l_n);
-	void setNickname(const std::string& n_n);
-	void setPhoneNumber(const std::string& ph_n);
-	void setDarkestSecret(const std::string& d_s);
+	
+	int		getIndex() const;
 };
 
 class PhoneBook
@@ -64,5 +65,7 @@ class PhoneBook
 	void	check_input_len(std::string& input);
 	void 	displayContacts(void);
 };
+
+bool is_digit_in(std::string& str);
 
 #endif

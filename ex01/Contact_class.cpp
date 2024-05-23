@@ -15,13 +15,13 @@
 Contact::Contact(void) : first_name(""), last_name(""), nickname(""),
 	phone_number(""), darkest_secret("") {}
 
-Contact::Contact(std::string& f_n, std::string& l_n,
-		std::string& n_n, std::string& ph_n, std::string& d_s) :
+Contact::Contact(std::string& f_n, std::string& l_n, std::string& n_n,
+	std::string& ph_n, std::string& d_s) :
 		first_name(f_n),
 		last_name(l_n),
 		nickname(n_n),
 		phone_number(ph_n),
-		darkest_secret(d_s) 
+		darkest_secret(d_s)
 {}
 
 std::string Contact::getFirstName() const
@@ -49,33 +49,8 @@ std::string Contact::getDarkestSecret() const
 	return (darkest_secret);
 }
 
-void Contact::setFirstName(const std::string& f_n)
-{
-    first_name = f_n;
-}
-
-void Contact::setLastName(const std::string& l_n)
-{
-    last_name = l_n;
-}
-
-void Contact::setNickname(const std::string& n_n)
-{
-    nickname = n_n;
-}
-
-void Contact::setPhoneNumber(const std::string& ph_n)
-{
-    phone_number = ph_n;
-}
-
-void Contact::setDarkestSecret(const std::string& d_s)
-{
-    darkest_secret = d_s;
-}
-
 Contact::~Contact(void)
 {
-	std::cout << "Destructeur called" << std::endl;
-	return ;
+	/* std::cout << "Destructeur Contact called" << std::endl;
+	return ; */
 }
