@@ -6,7 +6,7 @@
 /*   By: gpeyre <gpeyre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 17:11:03 by gpeyre            #+#    #+#             */
-/*   Updated: 2024/05/23 17:50:55 by gpeyre           ###   ########.fr       */
+/*   Updated: 2024/05/24 11:13:50 by gpeyre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,23 +77,3 @@ int	main()
 	}
 	return (0);
 }
-
-/* int main ()
-{
-	int j = 42;
-	std::string str ("I like");
-	std::cout << str << '\n';
-
-	unsigned sz = str.size();
-	unsigned int i = 0;
-	while (i++ < 10 - sz)
-		str.insert(0, "i");
-	std::cout << str << '\n';
-
-	str.resize (10);
-	str[9] = '.';
-	std::cout << str << '\n';
-
-	std::cout << j << '\n';
-	return 0;
-} */

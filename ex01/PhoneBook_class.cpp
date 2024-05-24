@@ -6,7 +6,7 @@
 /*   By: gpeyre <gpeyre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:47:52 by gpeyre            #+#    #+#             */
-/*   Updated: 2024/05/23 18:27:05 by gpeyre           ###   ########.fr       */
+/*   Updated: 2024/05/24 11:22:39 by gpeyre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void PhoneBook::addContact(const Contact &c)
 	}
 }
 
-void	PhoneBook::check_input_len(std::string& input)
+void	PhoneBook::checkInputLen(std::string& input)
 {
 	unsigned int len = input.size();
 	unsigned int j = 0;
@@ -70,9 +70,9 @@ void PhoneBook::displayContacts(void)
 		first_name = directory[j].getFirstName();
 		last_name = directory[j].getLastName();
 		nickname = directory[j].getNickname();
-		check_input_len(first_name);
-		check_input_len(last_name);
-		check_input_len(nickname);
+		checkInputLen(first_name);
+		checkInputLen(last_name);
+		checkInputLen(nickname);
 		if (!first_name.empty())
 			std::cout << "         " << j << "|" << first_name << "|" << last_name << "|" << nickname << std::endl;
 		j++;

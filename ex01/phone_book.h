@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook_class.hpp                                :+:      :+:    :+:   */
+/*   phone_book.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpeyre <gpeyre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 16:58:01 by gpeyre            #+#    #+#             */
-/*   Updated: 2024/05/24 11:24:19 by gpeyre           ###   ########.fr       */
+/*   Created: 2024/05/24 11:08:18 by gpeyre            #+#    #+#             */
+/*   Updated: 2024/05/24 11:16:03 by gpeyre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_CLASS_HPP
-# define PHONE_BOOK_CLASS_HPP
+#ifndef PHONE_BOOK_H
+# define PHONE_BOOK_H
 
-#include "Contact_class.hpp"
+#include <iostream>
+#include <string>
+#include <sstream>
 
-class PhoneBook
-{
-	private:
+#define BLUE "\033[94m"
+#define WHITE "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
 
-	int			cur_i;
-	int	const	MAX_CONTACT;
-	Contact		directory[8];
-
-	public:
-
-	PhoneBook(void);
-	~PhoneBook(void);
-
-    void	addContact(const Contact &c);
-	void	checkInputLen(std::string& input);
-	void 	displayContacts(void);
-};
+bool is_digit_in(std::string& str);
 
 #endif
