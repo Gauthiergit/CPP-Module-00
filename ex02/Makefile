@@ -16,6 +16,7 @@ GREEN = \033[92m
 BLUE = \033[94m
 
 SRCS  = tests.cpp \
+		Account.cpp
 
 
 OBJ = $(patsubst $(DIR_SRC)%.cpp,$(DIR_OBJ)%.o,$(SRCS))
