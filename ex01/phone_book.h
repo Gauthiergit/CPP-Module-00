@@ -6,7 +6,7 @@
 /*   By: gpeyre <gpeyre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 11:08:18 by gpeyre            #+#    #+#             */
-/*   Updated: 2024/05/24 11:16:03 by gpeyre           ###   ########.fr       */
+/*   Updated: 2024/05/27 19:59:02 by gpeyre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONE_BOOK_H
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <sstream>
 

@@ -6,7 +6,7 @@
 /*   By: gpeyre <gpeyre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:58:01 by gpeyre            #+#    #+#             */
-/*   Updated: 2024/05/24 11:24:19 by gpeyre           ###   ########.fr       */
+/*   Updated: 2024/05/27 20:47:30 by gpeyre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ class PhoneBook
 	int	const	MAX_CONTACT;
 	Contact		directory[8];
 
+	void	checkInputLen(std::string& input);
+	
 	public:
 
 	PhoneBook(void);
 	~PhoneBook(void);
 
     void	addContact(const Contact &c);
-	void	checkInputLen(std::string& input);
 	void 	displayContacts(void);
 };
 

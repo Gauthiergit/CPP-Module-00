@@ -6,7 +6,7 @@
 /*   By: gpeyre <gpeyre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:47:52 by gpeyre            #+#    #+#             */
-/*   Updated: 2024/05/24 11:22:39 by gpeyre           ###   ########.fr       */
+/*   Updated: 2024/05/27 20:49:44 by gpeyre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,7 @@ void PhoneBook::addContact(const Contact &c)
 
 void	PhoneBook::checkInputLen(std::string& input)
 {
-	unsigned int len = input.size();
-	unsigned int j = 0;
-	if (len < 10 && len != 0)
-	{
-		while (j++ < 10 - len)
-			input.insert(0, " ");
-	}
-	else if (len > 10)
+	if (input.size() > 10)
 	{
 		input.resize (10);
 		input[9] = '.';
@@ -74,7 +67,10 @@ void PhoneBook::displayContacts(void)
 		checkInputLen(last_name);
 		checkInputLen(nickname);
 		if (!first_name.empty())
-			std::cout << "         " << j << "|" << first_name << "|" << last_name << "|" << nickname << std::endl;
+			std::cout << std::setw(10) << std::setfill(' ') << std::right << j << "|"
+				<< std::setw(10) << std::setfill(' ') << std::right << first_name << "|"
+				<< std::setw(10) << std::setfill(' ') << std::right << last_name << "|"
+				<< std::setw(10) << std::setfill(' ') << std::right << nickname << std::endl;
 		j++;
 	}
 	if (!directory[0].getFirstName().empty())

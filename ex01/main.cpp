@@ -6,7 +6,7 @@
 /*   By: gpeyre <gpeyre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 17:11:03 by gpeyre            #+#    #+#             */
-/*   Updated: 2024/05/24 11:13:50 by gpeyre           ###   ########.fr       */
+/*   Updated: 2024/05/27 20:37:08 by gpeyre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ bool is_digit_in(std::string& str) {
     return true;
 }
 
-void	check_enter(std::string& input, const std::string request, int is_nb)
+void	check_enter(std::string& input, const std::string request, int flag)
 {
 	while (input.empty())
 	{
@@ -30,7 +30,7 @@ void	check_enter(std::string& input, const std::string request, int is_nb)
 		std::getline(std::cin, input);
 		if (input.empty())
 			std::cerr << RED << "Input do not be empty" << WHITE << std::endl;
-		if (is_nb == 1)
+		if (flag == 1)
 		{
 			if (is_digit_in(input) == false)
 			{
@@ -59,8 +59,15 @@ void	add_new_contact(PhoneBook &phone_book)
 	std::cerr << GREEN << "Contact added successfully" << WHITE << std::endl;
 }
 
-int	main()
+int	main(int argc, char **argv)
 {
+	(void)argv;
+	if (argc != 1)
+	{
+		std::cerr << "Use : ./phonebook" << std::endl;
+		return (1);
+	}
+
 	PhoneBook	phone_book;
 	std::string	command;
 

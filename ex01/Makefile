@@ -24,7 +24,6 @@ OBJ = $(patsubst $(DIR_SRC)%.cpp,$(DIR_OBJ)%.o,$(SRCS))
 
 # Compiling project
 $(NAME): $(OBJ)
-		@clear
 		@echo "$(BOLD)$(BLUE)🛠️ 🚧     Compiling project...     🚧🛠️$(RESET_COLOR)"
 		@echo "\n"
 		@$(CXX) $(CFLAGS) -o $(NAME) $(OBJ)
